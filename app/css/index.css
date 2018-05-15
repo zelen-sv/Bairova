@@ -13,10 +13,6 @@ body {
   overflow: hidden;
   z-index: 200; }
 
-.header__wrapper {
-  min-width: 267px;
-  width: 951px; }
-
 /*header-animation*/
 .header__keyvisual {
   position: absolute;
@@ -90,3 +86,19 @@ body {
             transform: scale(1) translateZ(0px) rotate(0deg); } }
 
 /*end-of-header-animation*/
+.header__wrapper {
+  min-width: 267px;
+  width: 951px;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.header__artist {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.header__footer {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }

@@ -7,11 +7,6 @@
   z-index: 200;
 }
 
-.header__wrapper {
-	min-width: 267px;
-	width: 951px;
-}
-
 
 /*header-animation*/
 
@@ -82,10 +77,18 @@
 
 /*end-of-header-animation*/
 
-.header__artist {
+.header__wrapper {
+	min-width: 267px;
+	width: 951px;
+	height: 100%;
+	position: relative;
+	display: flex;
+}
 
+.header__artist {
+	align-self: flex-start;
 }
 
 .header__footer {
-
+	align-self: flex-end;
 }
