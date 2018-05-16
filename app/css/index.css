@@ -8,10 +8,15 @@ body {
 .header {
   height: 100vh;
   width: auto;
-  background-color: #fffff;
+  background-color: #fff;
   position: relative;
   overflow: hidden;
-  z-index: 200; }
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
 
 /*header-animation*/
 .header__keyvisual {
@@ -87,17 +92,30 @@ body {
 
 /*end-of-header-animation*/
 .header__wrapper {
-  min-width: 267px;
-  width: 951px;
+  /*min-width: 267px;
+	width: 951px;*/
+  margin: 0 auto;
   height: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .header__artist {
   -ms-flex-item-align: start;
-      align-self: flex-start; }
+      align-self: flex-start;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  text-align: center; }
+
+.header__bairova {
+  margin-top: 250px; }
 
 .header__footer {
   -ms-flex-item-align: end;
