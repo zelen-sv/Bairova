@@ -86,23 +86,58 @@
 	height: 100%;
 	position: relative;
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	@media only screen and (max-width: 768px) {
+		justify-content: space-around;
+	}
 }
 
 .header__artist {
-	align-self: flex-start;
 	background-color: #fff;
 	border-radius: 50%;
-	width: 400px;
-	height: 400px;
-	margin-top: -200px;
+	width: 350px;
+	height: 350px;
+	margin-top: -175px;
 	text-align: center;
+	@media only screen and (max-width: 768px) {
+		margin-top: 0;
+	}
+	@media only screen and (max-width: 480px) {
+		width: 250px;
+		height: 250px;
+		margin-top: 0;
+	}
 }
 
 .header__bairova {
-	margin-top: 250px;
+	margin-top: 200px;
+	@media only screen and (max-width: 768px) {
+		margin-top: 40%;
+	}
 }
 
 .header__footer {
-	align-self: flex-end;
+	position: relative;
+	width: 750px;
+	max-width: 1000px;
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+	@media only screen and (min-width: 1150px) {
+		width: 1000px;
+	}
+}
+
+.header__social {
+}
+
+.header__button {
+	position: absolute;
+	right: 0;
 }
