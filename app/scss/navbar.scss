@@ -1,0 +1,26 @@
+.navbar__wrapper {
+	width: 740px;
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+	@media only screen and (min-width: 1150px) {
+		width: 1000px;
+	}
+}
+
+.navbar__list {
+	margin: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	list-style-type: none;
+}
+
+.navbar__devider {
+	margin: 0;
+	border: 0.5px solid #C8BED2;
+}
