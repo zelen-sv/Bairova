@@ -13,11 +13,38 @@
 
 .navbar__list {
 	margin: 0;
+	padding-left: 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 80px;
 	list-style-type: none;
+}
+
+.navbar__item {
+	flex-basis: 16.6%;
+	text-align: center;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.5s ease;
+	&:hover {
+		background-color: rgba($violet, 0.6);
+		a {
+			color: #FFF;
+		}
+	}
+	&:active {
+		background-color: $violet;
+		a {
+			color: #FFF;
+		}
+	}
+	a {
+		text-transform: uppercase;
+		color: $violet;
+	}
 }
 
 .navbar__devider {

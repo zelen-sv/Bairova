@@ -141,6 +141,7 @@ $color-lite: lighten($color, 10%);
 	position: fixed;
   top: 50%;
   left: 50%;
+  padding-left: 0;
   transform: translate3d(-50%,-50%,0);
   backface-visibility: hidden;
   perspective: 1000;
