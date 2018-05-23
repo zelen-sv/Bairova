@@ -2,7 +2,7 @@
 	background-color: #462B62;
 	background-image: url(../img/footer-background.png);
   background-position: top;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .footer__wrapper {
@@ -10,16 +10,20 @@
 	height: auto;
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 80px 0 40px;
+	padding: 70px 0 60px;
 	position: relative;
 	display: flex;
 	flex-wrap: nowrap;
+	color: #FFF;
+	font-size: 19px;
 	@media only screen and (max-width: 768px) {
 		width: 80%;
 		flex-wrap: wrap;
+		font-size: 16px;
 	}
 	@media only screen and (min-width: 1150px) {
 		width: 1000px;
+		font-size: 21px;
 	}
 }
 
@@ -41,21 +45,41 @@
 	align-items: center;
 }
 
-.footer__phone {
+.footer__phone, .footer__mail {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	p {
+		margin: 0;
+	}
+	img {
+		width: 35px;
+		margin-right: 17px;
+		@media only screen and (min-width: 1150px) {
+			width: 42px;
+		}
+	}
+}
 
+.footer__messengers {
+	opacity: 0.8;
 }
 
 .footer__mail {
-	padding-top: 30px;
-	@media only screen and (max-width: 768px) {
-		padding-bottom: 20px;
-		padding-top: 10px;
+	padding-top: 35px;
+	padding-bottom: 45px;
+	@media only screen and (min-width: 1150px) {
+		padding-top: 45px;
 	}
 }
 
 .footer__name {
+	width: 200px;
 	@media only screen and (max-width: 768px) {
 		display: none;
+	}
+	@media only screen and (min-width: 1150px) {
+		width: 280px;
 	}
 }
 
@@ -63,8 +87,8 @@
 	display: flex;
 	flex-wrap: nowrap;
 	img {
-		width: 40px;
-		margin: 20px 10px 0;
+		width: 50px;
+		margin: 0 10px;
 		opacity: 0.6;
 		transition: opacity 0.5s ease;
 		&:hover {
@@ -72,6 +96,7 @@
 		}
 		@media only screen and (min-width: 1150px) {
 			width: 60px;
+			margin: 0 15px;
 		}
 	}
 }
@@ -79,12 +104,12 @@
 .footer__developer {
 	position: relative;
 	width: 100%;
+	padding-bottom: 30px;
 }
 
-.footer__devider {
+/*.footer__devider {
   text-align: center;
   position: relative;
-  margin: 0;
   &:after {
   	content: '';
     display: block;
@@ -105,4 +130,21 @@
     top: 50%;
     left: 0;
   }
+}*/
+
+.footer__developer-table {
+	opacity: 0.5;
+}
+
+.footer__developer-text {
+	text-align: center;
+	color: #fff;
+	font-size: 17px;
+	@media only screen and (max-width: 768px) {
+		font-size: 15px;
+	}
+}
+
+.footer__developer-link {
+	color: $accent;
 }
