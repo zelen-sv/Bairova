@@ -27,10 +27,7 @@
 
 .homepage-content__animation {
 	position: absolute;
-	width: 50%;
-  right: 0;
-  top: 277px;
-  opacity: 0.8;
+	z-index: 200;
 }
 
 .homepage-content__line {
