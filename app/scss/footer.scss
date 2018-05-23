@@ -95,7 +95,6 @@
 			opacity: 1;
 		}
 		@media only screen and (min-width: 1150px) {
-			width: 60px;
 			margin: 0 15px;
 		}
 	}
@@ -147,4 +146,7 @@
 
 .footer__developer-link {
 	color: $accent;
+	&:hover {
+		text-decoration: underline;
+	}
 }

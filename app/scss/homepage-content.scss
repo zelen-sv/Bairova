@@ -1,8 +1,17 @@
+.homepage-content {
+	background: linear-gradient(#F6F3F7, #FFF, #FFF);
+	padding: 60px 0 100px;
+	position: relative;
+	@media only screen and (max-width: 768px) {
+		padding-bottom: 60px;
+	}
+}
+
 .homepage-content__wrapper {
 	width: 740px;
 	height: 740px;
 	max-width: 1000px;
-	margin: 50px auto;
+	margin: 0 auto;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -16,8 +25,15 @@
 	}
 }
 
+.homepage-content__animation {
+	position: absolute;
+	width: 50%;
+  right: 0;
+  top: 277px;
+  opacity: 0.8;
+}
+
 .homepage-content__line {
-	background-color: $violet;
 	height: 33%;
 	margin: 10px 0;
 	display: flex;
