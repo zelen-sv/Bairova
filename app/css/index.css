@@ -522,7 +522,6 @@ body {
 
 .homepage-content__wrapper {
   width: 740px;
-  height: 740px;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
@@ -535,19 +534,21 @@ body {
           flex-direction: column; }
   @media only screen and (max-width: 768px) {
     .homepage-content__wrapper {
-      width: 80%;
-      height: 915px; } }
+      width: 80%; } }
   @media only screen and (min-width: 1150px) {
     .homepage-content__wrapper {
-      width: 1000px;
-      height: 1000px; } }
+      width: 1000px; } }
 
 .homepage-content__animation {
   position: absolute;
-  z-index: 200; }
+  z-index: 200;
+  right: 0;
+  width: 800px; }
+  @media only screen and (max-width: 768px) {
+    .homepage-content__animation {
+      display: none; } }
 
 .homepage-content__line {
-  height: 33%;
   margin: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -559,34 +560,40 @@ body {
           justify-content: center; }
   @media only screen and (max-width: 768px) {
     .homepage-content__line {
-      height: auto;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      margin: 0; } }
+      margin: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .homepage-content__item {
   margin: 10px;
-  height: auto;
-  background-color: #FFF; }
+  background-size: cover;
+  background-position: center;
+  height: 226px; }
   @media only screen and (max-width: 768px) {
     .homepage-content__item {
-      width: 80%; } }
+      width: 290px; } }
+  @media only screen and (min-width: 1150px) {
+    .homepage-content__item {
+      height: 314px; } }
 
 .homepage-content__item--first {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
-          flex-grow: 2; }
+          flex-grow: 2;
+  background-image: url(../img/homepage-batik.jpg); }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--first {
-      height: 160px;
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
 
 .homepage-content__item--second {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
+  text-align: center; }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--second {
       display: none; } }
@@ -594,32 +601,35 @@ body {
 .homepage-content__item--third {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  background-image: url(../img/homepage-free.jpg); }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--third {
-      height: 160px;
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
 
 .homepage-content__item--fourth {
   width: 226px;
+  height: 226px;
   -webkit-box-flex: 0;
       -ms-flex: none;
-          flex: none; }
+          flex: none;
+  background-image: url(../img/homepage-risunok.png); }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--fourth {
-      width: 80%;
-      height: 160px;
-      /*height: auto; -когда будут фоновые изображения*/ } }
+      height: 290px;
+      width: 290px; } }
   @media only screen and (min-width: 1150px) {
     .homepage-content__item--fourth {
-      width: 314px; } }
+      width: 314px;
+      height: 314px; } }
 
 .homepage-content__item--fifth {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
-          flex-grow: 2; }
+          flex-grow: 2;
+  background-image: url(../img/homepage-grafika.jpg); }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--fifth {
       display: none; } }
@@ -627,10 +637,10 @@ body {
 .homepage-content__item--sixth {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
-          flex-grow: 2; }
+          flex-grow: 2;
+  background-image: url(../img/homepage-oil2.jpg); }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--sixth {
-      height: 160px;
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
@@ -638,7 +648,8 @@ body {
 .homepage-content__item--seventh {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  background-image: url(../img/homepage-oil3.jpg); }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--seventh {
       display: none; } }
@@ -646,10 +657,10 @@ body {
 .homepage-content__item--eighth {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  background-image: url(../img/homepage-study.jpg); }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--eighth {
-      height: 160px;
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }

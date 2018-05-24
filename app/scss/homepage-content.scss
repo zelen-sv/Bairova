@@ -9,7 +9,6 @@
 
 .homepage-content__wrapper {
 	width: 740px;
-	height: 740px;
 	max-width: 1000px;
 	margin: 0 auto;
 	position: relative;
@@ -17,51 +16,57 @@
 	flex-direction: column;
 	@media only screen and (max-width: 768px) {
 		width: 80%;
-		height: 915px;
 	}
 	@media only screen and (min-width: 1150px) {
 		width: 1000px;
-		height: 1000px;
 	}
 }
 
 .homepage-content__animation {
 	position: absolute;
 	z-index: 200;
+	right: 0;
+	width: 800px;
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 }
 
 .homepage-content__line {
-	height: 33%;
 	margin: 10px 0;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
 	@media only screen and (max-width: 768px) {
-		height: auto;
-		flex-wrap: wrap;
 		margin: 0;
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
 .homepage-content__item {
 	margin: 10px;
-	height: auto;
-	background-color: #FFF;
+	background-size: cover;
+	background-position: center;
+	height: 226px;
 	@media only screen and (max-width: 768px) {
-		width: 80%;
+		width: 290px;
+	}
+	@media only screen and (min-width: 1150px) {
+		height: 314px;
 	}
 }
 
 .homepage-content__item--first {
 	flex-grow: 2;
+	background-image: url(../img/homepage-batik.jpg);
 	@media only screen and (max-width: 768px) {
-		height: 160px;
 		flex-grow: 0;
 	}
 }
 
 .homepage-content__item--second {
-	flex-grow: 1;
+	text-align: center;
 	@media only screen and (max-width: 768px) {
 		display: none;
 	}
@@ -69,27 +74,30 @@
 
 .homepage-content__item--third {
 	flex-grow: 1;
+	background-image: url(../img/homepage-free.jpg);
 	@media only screen and (max-width: 768px) {
-		height: 160px;
 		flex-grow: 0;
 	}
 }
 
 .homepage-content__item--fourth {
 	width: 226px;
+	height: 226px;
 	flex: none;
+	background-image: url(../img/homepage-risunok.png);
 	@media only screen and (max-width: 768px) {
-		width: 80%;
-		height: 160px;
-		/*height: auto; -когда будут фоновые изображения*/
+		height: 290px;
+		width: 290px;
 	}
 	@media only screen and (min-width: 1150px) {
 		width: 314px;
+		height: 314px;
 	}
 }
 
 .homepage-content__item--fifth {
 	flex-grow: 2;
+	background-image: url(../img/homepage-grafika.jpg);
 	@media only screen and (max-width: 768px) {
 		display: none;
 	}
@@ -97,14 +105,15 @@
 
 .homepage-content__item--sixth {
 	flex-grow: 2;
+	background-image: url(../img/homepage-oil2.jpg);
 	@media only screen and (max-width: 768px) {
-		height: 160px;
 		flex-grow: 0;
 	}
 }
 
 .homepage-content__item--seventh {
 	flex-grow: 1;
+	background-image: url(../img/homepage-oil3.jpg);
 	@media only screen and (max-width: 768px) {
 		display: none;
 	}
@@ -112,8 +121,8 @@
 
 .homepage-content__item--eighth {
 	flex-grow: 1;
+	background-image: url(../img/homepage-study.jpg);
 	@media only screen and (max-width: 768px) {
-		height: 160px;
 		flex-grow: 0;
 	}
 }
