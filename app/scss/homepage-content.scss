@@ -22,7 +22,7 @@
 	}
 }
 
-.homepage-content__animation {
+/*.homepage-content__animation {
 	position: absolute;
 	z-index: 200;
 	right: 0;
@@ -30,7 +30,7 @@
 	@media only screen and (max-width: 768px) {
 		display: none;
 	}
-}
+}*/
 
 .homepage-content__line {
 	margin: 10px 0;
@@ -57,22 +57,15 @@
 	}
 }
 
-.homepage-content__item--first {
-	flex-grow: 2;
+.homepage-content__item--batik {
+	flex-grow: 1.5;
 	background-image: url(../img/homepage-batik.jpg);
 	@media only screen and (max-width: 768px) {
 		flex-grow: 0;
 	}
 }
 
-.homepage-content__item--second {
-	text-align: center;
-	@media only screen and (max-width: 768px) {
-		display: none;
-	}
-}
-
-.homepage-content__item--third {
+.homepage-content__item--graphic {
 	flex-grow: 1;
 	background-image: url(../img/homepage-free.jpg);
 	@media only screen and (max-width: 768px) {
@@ -80,7 +73,7 @@
 	}
 }
 
-.homepage-content__item--fourth {
+.homepage-content__item--academic {
 	width: 226px;
 	height: 226px;
 	flex: none;
@@ -95,7 +88,7 @@
 	}
 }
 
-.homepage-content__item--fifth {
+.homepage-content__item--pupil {
 	flex-grow: 2;
 	background-image: url(../img/homepage-grafika.jpg);
 	@media only screen and (max-width: 768px) {
@@ -103,7 +96,7 @@
 	}
 }
 
-.homepage-content__item--sixth {
+.homepage-content__item--oil {
 	flex-grow: 2;
 	background-image: url(../img/homepage-oil2.jpg);
 	@media only screen and (max-width: 768px) {
@@ -111,7 +104,7 @@
 	}
 }
 
-.homepage-content__item--seventh {
+.homepage-content__item--painting {
 	flex-grow: 1;
 	background-image: url(../img/homepage-oil3.jpg);
 	@media only screen and (max-width: 768px) {
@@ -119,10 +112,27 @@
 	}
 }
 
-.homepage-content__item--eighth {
+.homepage-content__item--teaching {
 	flex-grow: 1;
 	background-image: url(../img/homepage-study.jpg);
 	@media only screen and (max-width: 768px) {
 		flex-grow: 0;
+	}
+}
+
+.homepage-content__text {
+	text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  p {
+  	color: $violet;
+  	line-height: 1.5;
+  }
+  img {
+  	margin-top: 10px;
+  	opacity: 0.6;
+  }
+  @media only screen and (max-width: 768px) {
+		display: none;
 	}
 }

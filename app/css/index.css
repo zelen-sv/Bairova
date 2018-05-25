@@ -452,6 +452,22 @@ body {
       -webkit-transition-delay: 1.25s;
               transition-delay: 1.25s; }
 
+#navbar {
+  overflow: hidden;
+  background-color: #FFF;
+  z-index: 200; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid rgba(71, 39, 106, 0.3);
+  -webkit-transition: border-bottom 0.5s ease;
+  transition: border-bottom 0.5s ease; }
+
+.sticky + .homepage-content {
+  padding-top: 142px; }
+
 .navbar__wrapper {
   width: 740px;
   max-width: 1000px;
@@ -539,15 +555,15 @@ body {
     .homepage-content__wrapper {
       width: 1000px; } }
 
-.homepage-content__animation {
-  position: absolute;
-  z-index: 200;
-  right: 0;
-  width: 800px; }
-  @media only screen and (max-width: 768px) {
-    .homepage-content__animation {
-      display: none; } }
-
+/*.homepage-content__animation {
+	position: absolute;
+	z-index: 200;
+	right: 0;
+	width: 800px;
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+}*/
 .homepage-content__line {
   margin: 10px 0;
   display: -webkit-box;
@@ -581,35 +597,29 @@ body {
     .homepage-content__item {
       height: 314px; } }
 
-.homepage-content__item--first {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+.homepage-content__item--batik {
+  -webkit-box-flex: 1.5;
+      -ms-flex-positive: 1.5;
+          flex-grow: 1.5;
   background-image: url(../img/homepage-batik.jpg); }
   @media only screen and (max-width: 768px) {
-    .homepage-content__item--first {
+    .homepage-content__item--batik {
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
 
-.homepage-content__item--second {
-  text-align: center; }
-  @media only screen and (max-width: 768px) {
-    .homepage-content__item--second {
-      display: none; } }
-
-.homepage-content__item--third {
+.homepage-content__item--graphic {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-image: url(../img/homepage-free.jpg); }
   @media only screen and (max-width: 768px) {
-    .homepage-content__item--third {
+    .homepage-content__item--graphic {
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
 
-.homepage-content__item--fourth {
+.homepage-content__item--academic {
   width: 226px;
   height: 226px;
   -webkit-box-flex: 0;
@@ -617,53 +627,67 @@ body {
           flex: none;
   background-image: url(../img/homepage-risunok.png); }
   @media only screen and (max-width: 768px) {
-    .homepage-content__item--fourth {
+    .homepage-content__item--academic {
       height: 290px;
       width: 290px; } }
   @media only screen and (min-width: 1150px) {
-    .homepage-content__item--fourth {
+    .homepage-content__item--academic {
       width: 314px;
       height: 314px; } }
 
-.homepage-content__item--fifth {
+.homepage-content__item--pupil {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
   background-image: url(../img/homepage-grafika.jpg); }
   @media only screen and (max-width: 768px) {
-    .homepage-content__item--fifth {
+    .homepage-content__item--pupil {
       display: none; } }
 
-.homepage-content__item--sixth {
+.homepage-content__item--oil {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
   background-image: url(../img/homepage-oil2.jpg); }
   @media only screen and (max-width: 768px) {
-    .homepage-content__item--sixth {
+    .homepage-content__item--oil {
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
 
-.homepage-content__item--seventh {
+.homepage-content__item--painting {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-image: url(../img/homepage-oil3.jpg); }
   @media only screen and (max-width: 768px) {
-    .homepage-content__item--seventh {
+    .homepage-content__item--painting {
       display: none; } }
 
-.homepage-content__item--eighth {
+.homepage-content__item--teaching {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-image: url(../img/homepage-study.jpg); }
   @media only screen and (max-width: 768px) {
-    .homepage-content__item--eighth {
+    .homepage-content__item--teaching {
       -webkit-box-flex: 0;
           -ms-flex-positive: 0;
               flex-grow: 0; } }
+
+.homepage-content__text {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px; }
+  .homepage-content__text p {
+    color: #47276A;
+    line-height: 1.5; }
+  .homepage-content__text img {
+    margin-top: 10px;
+    opacity: 0.6; }
+  @media only screen and (max-width: 768px) {
+    .homepage-content__text {
+      display: none; } }
 
 .footer {
   background-color: #462B62;
