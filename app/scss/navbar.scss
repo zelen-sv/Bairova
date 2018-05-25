@@ -2,6 +2,9 @@
 	overflow: hidden;
 	background-color: #FFF;
 	z-index: 200;
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 }
 
 .sticky {
@@ -13,7 +16,10 @@
 }
 
 .sticky + .homepage-content {
-  padding-top: 142px;
+  padding-top: 184px;
+  @media only screen and (max-width: 768px) {
+		padding-top: 60px;
+	}
 }
 
 .navbar__wrapper {

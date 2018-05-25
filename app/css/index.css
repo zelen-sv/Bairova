@@ -456,6 +456,9 @@ body {
   overflow: hidden;
   background-color: #FFF;
   z-index: 200; }
+  @media only screen and (max-width: 768px) {
+    #navbar {
+      display: none; } }
 
 .sticky {
   position: fixed;
@@ -466,7 +469,10 @@ body {
   transition: border-bottom 0.5s ease; }
 
 .sticky + .homepage-content {
-  padding-top: 142px; }
+  padding-top: 184px; }
+  @media only screen and (max-width: 768px) {
+    .sticky + .homepage-content {
+      padding-top: 60px; } }
 
 .navbar__wrapper {
   width: 740px;
@@ -530,7 +536,7 @@ body {
 .homepage-content {
   background: -webkit-gradient(linear, left top, left bottom, from(#F6F3F7), color-stop(#FFF), to(#FFF));
   background: linear-gradient(#F6F3F7, #FFF, #FFF);
-  padding: 60px 0 100px;
+  padding: 100px 0 100px;
   position: relative; }
   @media only screen and (max-width: 768px) {
     .homepage-content {
@@ -589,13 +595,80 @@ body {
   margin: 10px;
   background-size: cover;
   background-position: center;
-  height: 226px; }
+  height: 226px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .homepage-content__item:before {
+    content: '';
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    -webkit-transition-property: top, opacity;
+    transition-property: top, opacity;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
+    @media only screen and (max-width: 768px) {
+      .homepage-content__item:before {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.6); } }
+  .homepage-content__item:focus:before,
+  .homepage-content__item:focus span, .homepage-content__item:hover:before,
+  .homepage-content__item:hover span {
+    opacity: 1; }
+  .homepage-content__item:focus span, .homepage-content__item:hover span {
+    top: 0; }
+  .homepage-content__item:focus .homepage-content__item-header, .homepage-content__item:hover .homepage-content__item-header {
+    -webkit-transition-delay: 0.10s;
+            transition-delay: 0.10s; }
+  .homepage-content__item:focus .homepage-content__item-text, .homepage-content__item:hover .homepage-content__item-text {
+    -webkit-transition-delay: 0.20s;
+            transition-delay: 0.20s; }
   @media only screen and (max-width: 768px) {
     .homepage-content__item {
       width: 290px; } }
   @media only screen and (min-width: 1150px) {
     .homepage-content__item {
       height: 314px; } }
+
+.homepage-content__item-details {
+  font-size: 16px;
+  color: #47276A; }
+  .homepage-content__item-details span {
+    display: block;
+    opacity: 0;
+    position: relative;
+    top: 100px;
+    -webkit-transition-property: top, opacity;
+    transition-property: top, opacity;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+    @media only screen and (max-width: 768px) {
+      .homepage-content__item-details span {
+        top: 0;
+        opacity: 1; } }
+  .homepage-content__item-details .homepage-content__item-header {
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 22px; }
+  .homepage-content__item-details .homepage-content__item-text {
+    line-height: 2;
+    margin-top: 5px;
+    font-size: 16px; }
 
 .homepage-content__item--batik {
   -webkit-box-flex: 1.5;
@@ -626,6 +699,8 @@ body {
       -ms-flex: none;
           flex: none;
   background-image: url(../img/homepage-risunok.png); }
+  .homepage-content__item--academic:before {
+    border-radius: 47%; }
   @media only screen and (max-width: 768px) {
     .homepage-content__item--academic {
       height: 290px;
@@ -675,19 +750,26 @@ body {
           -ms-flex-positive: 0;
               flex-grow: 0; } }
 
-.homepage-content__text {
-  text-align: center;
+.homepage-content__poem {
   margin-top: 100px;
-  margin-bottom: 40px; }
-  .homepage-content__text p {
-    color: #47276A;
-    line-height: 1.5; }
-  .homepage-content__text img {
-    margin-top: 10px;
-    opacity: 0.6; }
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media only screen and (max-width: 768px) {
-    .homepage-content__text {
+    .homepage-content__poem {
       display: none; } }
+
+.homepage-content__text {
+  width: 300px;
+  margin-bottom: 30px; }
 
 .footer {
   background-color: #462B62;
@@ -718,7 +800,7 @@ body {
   @media only screen and (min-width: 1150px) {
     .footer__wrapper {
       width: 1000px;
-      font-size: 21px; } }
+      font-size: 19px; } }
 
 .footer__mini-wrapper {
   margin: 0 auto; }
@@ -756,11 +838,8 @@ body {
   .footer__phone p, .footer__mail p {
     margin: 0; }
   .footer__phone img, .footer__mail img {
-    width: 35px;
+    width: 36px;
     margin-right: 17px; }
-    @media only screen and (min-width: 1150px) {
-      .footer__phone img, .footer__mail img {
-        width: 42px; } }
 
 .footer__messengers {
   opacity: 0.8; }
@@ -773,13 +852,13 @@ body {
       padding-top: 45px; } }
 
 .footer__name {
-  width: 200px; }
+  width: 240px; }
   @media only screen and (max-width: 768px) {
     .footer__name {
       display: none; } }
   @media only screen and (min-width: 1150px) {
     .footer__name {
-      width: 280px; } }
+      width: 260px; } }
 
 .footer__social {
   display: -webkit-box;
@@ -788,16 +867,21 @@ body {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
   .footer__social img {
-    width: 50px;
+    width: 40px;
+    height: 60px;
     margin: 0 10px;
     opacity: 0.6;
     -webkit-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease; }
     .footer__social img:hover {
       opacity: 1; }
+    @media only screen and (max-width: 768px) {
+      .footer__social img {
+        width: 50px; } }
     @media only screen and (min-width: 1150px) {
       .footer__social img {
-        margin: 0 15px; } }
+        margin: 0 15px;
+        width: 45px; } }
 
 .footer__developer {
   position: relative;
